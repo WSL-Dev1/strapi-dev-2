@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "new_tags",
+  "info": {
+    "singularName": "new-tag",
+    "pluralName": "new-tags",
+    "displayName": "New Tag"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Tag_Name": {
+      "type": "string",
+      "required": true,
+      "maxLength": 256
+    },
+    "Description": {
+      "type": "string",
+      "required": true,
+      "maxLength": 128,
+      "minLength": 64
+    },
+    "Slug": {
+      "type": "uid",
+      "required": true
+    }
+  }
+}

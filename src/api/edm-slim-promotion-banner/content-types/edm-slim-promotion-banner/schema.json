@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "edm_slim_promotion_banners",
+  "info": {
+    "singularName": "edm-slim-promotion-banner",
+    "pluralName": "edm-slim-promotion-banners",
+    "displayName": "EDM Slim Promotion Banner",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "EDM_Slim_Promotion_Banner_Name": {
+      "type": "string",
+      "required": true,
+      "maxLength": 256
+    },
+    "Image_Desktop": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Image_Mobile": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Optional_Hyperlink": {
+      "type": "string",
+      "required": false,
+      "maxLength": 256
+    },
+    "vip_edm": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::vip-edm.vip-edm",
+      "inversedBy": "edm_slim_promotion_banners"
+    }
+  }
+}

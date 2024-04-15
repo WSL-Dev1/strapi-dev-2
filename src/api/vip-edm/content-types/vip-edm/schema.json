@@ -1,0 +1,81 @@
+{
+  "kind": "collectionType",
+  "collectionName": "vip_edms",
+  "info": {
+    "singularName": "vip-edm",
+    "pluralName": "vip-edms",
+    "displayName": "VIP EDM",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Email_Title": {
+      "type": "string",
+      "maxLength": 256,
+      "required": true
+    },
+    "author": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::author.author"
+    },
+    "Published_Date": {
+      "required": true,
+      "type": "datetime"
+    },
+    "edm_hero_image": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::edm-hero-image.edm-hero-image"
+    },
+    "Intro_Title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 256
+    },
+    "Intro_Blurb": {
+      "type": "string",
+      "required": true,
+      "maxLength": 256
+    },
+    "edm_product_reels": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::edm-product-reel.edm-product-reel",
+      "mappedBy": "vip_edm"
+    },
+    "edm_voucher_offer": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::edm-voucher-offer.edm-voucher-offer"
+    },
+    "edm_slim_promotion_banners": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::edm-slim-promotion-banner.edm-slim-promotion-banner",
+      "mappedBy": "vip_edm"
+    },
+    "edm_product_spotlight": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::edm-product-spotlight.edm-product-spotlight"
+    },
+    "edm_category_links": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::edm-category-links.edm-category-links",
+      "mappedBy": "vip_edm"
+    },
+    "post": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::post.post"
+    },
+    "Slug": {
+      "type": "uid"
+    }
+  }
+}

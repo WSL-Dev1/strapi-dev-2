@@ -1,0 +1,73 @@
+{
+  "kind": "collectionType",
+  "collectionName": "locations",
+  "info": {
+    "singularName": "location",
+    "pluralName": "locations",
+    "displayName": "Location",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Location_Name": {
+      "type": "string",
+      "required": true,
+      "maxLength": 256
+    },
+    "Location_Id": {
+      "type": "integer",
+      "required": true
+    },
+    "faqs": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::faq.faq",
+      "mappedBy": "locations"
+    },
+    "homepage_news_medias": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::homepage-news-media.homepage-news-media",
+      "mappedBy": "locations"
+    },
+    "question_and_answer": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::question-and-answer.question-and-answer",
+      "inversedBy": "locations"
+    },
+    "tv_category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::tv-category.tv-category",
+      "inversedBy": "locations"
+    },
+    "tv_product_link": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::tv-product-link.tv-product-link",
+      "inversedBy": "locations"
+    },
+    "tv_explain_link": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::tv-explain-link.tv-explain-link",
+      "inversedBy": "locations"
+    },
+    "tv_video": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::tv-video.tv-video",
+      "inversedBy": "locations"
+    },
+    "posts": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::post.post",
+      "inversedBy": "locations"
+    }
+  }
+}

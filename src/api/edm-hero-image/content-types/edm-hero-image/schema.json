@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "edm_hero_images",
+  "info": {
+    "singularName": "edm-hero-image",
+    "pluralName": "edm-hero-images",
+    "displayName": "EDM Hero Image"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Image_Title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 256
+    },
+    "Hero_Image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "kind": "collectionType",
+  "collectionName": "staff_reviews",
+  "info": {
+    "singularName": "staff-review",
+    "pluralName": "staff-reviews",
+    "displayName": "Staff Review"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Review_Title": {
+      "type": "string",
+      "maxLength": 256,
+      "required": true
+    },
+    "Variant_ID": {
+      "type": "biginteger",
+      "required": true
+    },
+    "Quality_Rating": {
+      "type": "integer",
+      "required": true
+    },
+    "Value_Rating": {
+      "type": "integer",
+      "required": true
+    },
+    "Satisfaction_Rating": {
+      "type": "integer",
+      "required": true
+    },
+    "Overall_Rating": {
+      "type": "integer",
+      "required": true
+    },
+    "Review_Short_Synopsis": {
+      "type": "string",
+      "required": true,
+      "maxLength": 256
+    },
+    "Review_Long": {
+      "type": "text",
+      "required": true
+    },
+    "Featured_Image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "author": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::author.author"
+    },
+    "Published_Date": {
+      "type": "datetime",
+      "required": true
+    },
+    "Live": {
+      "type": "boolean",
+      "required": true
+    }
+  }
+}

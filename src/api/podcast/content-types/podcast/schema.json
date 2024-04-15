@@ -1,0 +1,123 @@
+{
+  "kind": "collectionType",
+  "collectionName": "podcasts",
+  "info": {
+    "singularName": "podcast",
+    "pluralName": "podcasts",
+    "displayName": "Podcast",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 256
+    },
+    "Website_Description": {
+      "type": "text",
+      "required": true
+    },
+    "Description": {
+      "type": "text",
+      "required": true
+    },
+    "Link": {
+      "type": "string",
+      "required": true,
+      "maxLength": 256
+    },
+    "Image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Author": {
+      "type": "string",
+      "required": true,
+      "maxLength": 256
+    },
+    "Copyright": {
+      "type": "string",
+      "required": true,
+      "maxLength": 256
+    },
+    "Language": {
+      "type": "string",
+      "required": true,
+      "maxLength": 256
+    },
+    "iTunes_author": {
+      "type": "string",
+      "maxLength": 256,
+      "required": true
+    },
+    "iTunes_Type": {
+      "type": "string",
+      "required": true,
+      "maxLength": 256
+    },
+    "podcast_owner": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::podcast-owner.podcast-owner"
+    },
+    "Itunes_Explicit": {
+      "type": "string",
+      "required": true,
+      "maxLength": 256
+    },
+    "Itunes_Category_Text_1": {
+      "type": "string",
+      "required": true,
+      "maxLength": 256
+    },
+    "Itunes_Category_Text_2": {
+      "type": "string",
+      "required": true,
+      "maxLength": 256
+    },
+    "Itunes_Image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "Last_Build_Date": {
+      "type": "datetime",
+      "required": true
+    },
+    "Next_Podcast": {
+      "type": "datetime",
+      "required": true
+    },
+    "Next_Podcast_Text": {
+      "type": "string",
+      "required": true,
+      "maxLength": 256
+    },
+    "Recent_Episodes_Text": {
+      "type": "string",
+      "required": true,
+      "maxLength": 256
+    },
+    "Postcast_Presenters_Text": {
+      "type": "string",
+      "required": true,
+      "maxLength": 256
+    },
+    "All_Episodes_Text": {
+      "type": "string",
+      "required": true,
+      "maxLength": 256
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tv_product_links",
+  "info": {
+    "singularName": "tv-product-link",
+    "pluralName": "tv-product-links",
+    "displayName": "TV Product Link"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 256
+    },
+    "Variant_ID": {
+      "required": true,
+      "type": "biginteger"
+    },
+    "Description": {
+      "type": "text",
+      "required": true
+    },
+    "locations": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::location.location",
+      "mappedBy": "tv_product_link"
+    }
+  }
+}

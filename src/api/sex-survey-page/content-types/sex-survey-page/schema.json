@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sex_survey_pages",
+  "info": {
+    "singularName": "sex-survey-page",
+    "pluralName": "sex-survey-pages",
+    "displayName": "Sex Survey Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 256
+    },
+    "sex_survey_template_1s": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::sex-survey-template-1.sex-survey-template-1"
+    },
+    "sex_survey_template_2s": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::sex-survey-template-2.sex-survey-template-2"
+    },
+    "sex_survey_template_3s": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::sex-survey-template-3.sex-survey-template-3"
+    },
+    "sex_survey_template_4s": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::sex-survey-template-4.sex-survey-template-4"
+    },
+    "sex_survey_template_5s": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::sex-survey-template-5.sex-survey-template-5"
+    }
+  }
+}

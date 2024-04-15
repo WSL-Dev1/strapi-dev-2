@@ -1,0 +1,85 @@
+{
+  "kind": "collectionType",
+  "collectionName": "posts",
+  "info": {
+    "singularName": "post",
+    "pluralName": "posts",
+    "displayName": "Post",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 110,
+      "minLength": 20
+    },
+    "Short_Title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 80,
+      "minLength": 20
+    },
+    "Intro_Blurb": {
+      "type": "string",
+      "maxLength": 256,
+      "required": true
+    },
+    "Featured_Image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "author": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::author.author"
+    },
+    "locations": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::location.location",
+      "mappedBy": "posts"
+    },
+    "Body": {
+      "type": "text",
+      "required": true
+    },
+    "Word_Count": {
+      "required": true,
+      "type": "biginteger"
+    },
+    "Date": {
+      "type": "date",
+      "required": true
+    },
+    "Published_date": {
+      "type": "datetime",
+      "required": true
+    },
+    "Views": {
+      "type": "biginteger",
+      "required": true
+    },
+    "Slug": {
+      "type": "uid"
+    },
+    "category": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::category.category"
+    },
+    "new_tag": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::new-tag.new-tag"
+    }
+  }
+}

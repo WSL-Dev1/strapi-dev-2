@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_keywords_keywords",
+  "info": {
+    "displayName": "Keywords",
+    "icon": "alien",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Value": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

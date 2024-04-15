@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "podcast_authors",
+  "info": {
+    "singularName": "podcast-author",
+    "pluralName": "podcast-authors",
+    "displayName": "Podcast Author"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Author_Name": {
+      "type": "string",
+      "required": true,
+      "maxLength": 256
+    },
+    "Author_Description": {
+      "type": "string",
+      "required": true,
+      "maxLength": 256
+    },
+    "Author_Image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "Author_Visible": {
+      "type": "boolean",
+      "required": true
+    }
+  }
+}

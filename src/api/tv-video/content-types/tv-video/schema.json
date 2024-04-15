@@ -1,0 +1,92 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tv_videos",
+  "info": {
+    "singularName": "tv-video",
+    "pluralName": "tv-videos",
+    "displayName": "TV Video",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 256
+    },
+    "tv_category": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::tv-category.tv-category"
+    },
+    "Season": {
+      "type": "integer",
+      "required": true
+    },
+    "Episode": {
+      "type": "integer",
+      "required": true
+    },
+    "Transcript": {
+      "type": "text",
+      "required": true
+    },
+    "tv_product_link": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::tv-product-link.tv-product-link"
+    },
+    "tv_explain_link": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::tv-explain-link.tv-explain-link"
+    },
+    "Description": {
+      "type": "string",
+      "required": true,
+      "maxLength": 256
+    },
+    "Duration": {
+      "type": "biginteger",
+      "required": true
+    },
+    "Keywords": {
+      "displayName": "Keywords",
+      "type": "component",
+      "repeatable": true,
+      "component": "keywords.keywords",
+      "required": true
+    },
+    "Publish_Date": {
+      "type": "datetime",
+      "required": true
+    },
+    "locations": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::location.location",
+      "mappedBy": "tv_video"
+    },
+    "URL": {
+      "type": "string",
+      "required": true,
+      "maxLength": 256
+    },
+    "Youtube_Video_ID": {
+      "type": "string",
+      "required": true,
+      "maxLength": 256
+    },
+    "Thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

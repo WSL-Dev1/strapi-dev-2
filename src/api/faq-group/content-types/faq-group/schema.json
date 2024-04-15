@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "faq_groups",
+  "info": {
+    "singularName": "faq-group",
+    "pluralName": "faq-groups",
+    "displayName": "FAQ Group"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "FAQ_Group_Section": {
+      "type": "string",
+      "required": true,
+      "maxLength": 256
+    },
+    "faq": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::faq.faq",
+      "mappedBy": "faq_group"
+    }
+  }
+}

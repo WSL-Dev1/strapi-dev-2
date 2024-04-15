@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tv_categories",
+  "info": {
+    "singularName": "tv-category",
+    "pluralName": "tv-categories",
+    "displayName": "TV Category"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 256
+    },
+    "URL": {
+      "type": "string",
+      "required": true,
+      "maxLength": 256
+    },
+    "Status": {
+      "type": "boolean",
+      "required": true
+    },
+    "Description": {
+      "type": "string",
+      "required": true,
+      "maxLength": 256
+    },
+    "Sub_Description": {
+      "type": "string",
+      "required": true,
+      "maxLength": 256
+    },
+    "locations": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::location.location",
+      "mappedBy": "tv_category"
+    }
+  }
+}

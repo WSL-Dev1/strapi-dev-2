@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "edm_voucher_offers",
+  "info": {
+    "singularName": "edm-voucher-offer",
+    "pluralName": "edm-voucher-offers",
+    "displayName": "EDM Voucher Offer"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Voucher_Offer_Line_1": {
+      "type": "string",
+      "maxLength": 256,
+      "required": true
+    },
+    "Voucher_Offer_Line_2": {
+      "type": "string",
+      "maxLength": 256,
+      "required": true
+    },
+    "Voucher_Code": {
+      "type": "string",
+      "required": true,
+      "maxLength": 256
+    }
+  }
+}

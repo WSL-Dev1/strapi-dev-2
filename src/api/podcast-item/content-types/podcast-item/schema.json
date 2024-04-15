@@ -1,0 +1,84 @@
+{
+  "kind": "collectionType",
+  "collectionName": "podcast_items",
+  "info": {
+    "singularName": "podcast-item",
+    "pluralName": "podcast-items",
+    "displayName": "Podcast Item",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 256
+    },
+    "Website_Description": {
+      "type": "text",
+      "required": true
+    },
+    "Description": {
+      "type": "text",
+      "required": true
+    },
+    "Link": {
+      "type": "string",
+      "required": true,
+      "maxLength": 256
+    },
+    "pubDate": {
+      "required": true,
+      "type": "datetime"
+    },
+    "Sound_file_mp3": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "audios"
+      ]
+    },
+    "iteunsexplicit": {
+      "type": "string",
+      "required": true,
+      "maxLength": 256
+    },
+    "itunesduration": {
+      "type": "string",
+      "required": true,
+      "maxLength": 256
+    },
+    "itunesimage": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "itunesseason": {
+      "type": "string",
+      "maxLength": 256,
+      "required": true
+    },
+    "itunesepisode": {
+      "type": "string",
+      "required": true,
+      "maxLength": 256
+    },
+    "iteunsepisodetype": {
+      "type": "string",
+      "required": true,
+      "maxLength": 256
+    },
+    "Keywords": {
+      "type": "component",
+      "repeatable": true,
+      "component": "keywords.keywords"
+    }
+  }
+}

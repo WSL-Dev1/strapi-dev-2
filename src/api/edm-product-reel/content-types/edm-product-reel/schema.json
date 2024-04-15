@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "edm_product_reels",
+  "info": {
+    "singularName": "edm-product-reel",
+    "pluralName": "edm-product-reels",
+    "displayName": "EDM Product Reel",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Reel_Title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 256
+    },
+    "Reel_Text": {
+      "type": "string",
+      "required": true,
+      "maxLength": 256
+    },
+    "Variant_List": {
+      "type": "string",
+      "required": true,
+      "maxLength": 256
+    },
+    "vip_edm": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::vip-edm.vip-edm",
+      "inversedBy": "edm_product_reels"
+    }
+  }
+}

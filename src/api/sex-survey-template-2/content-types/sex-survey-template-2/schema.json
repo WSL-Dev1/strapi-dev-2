@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sex_survey_template_2s",
+  "info": {
+    "singularName": "sex-survey-template-2",
+    "pluralName": "sex-survey-template-2s",
+    "displayName": "Sex Survey Template 2"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Headline": {
+      "type": "string",
+      "required": true,
+      "maxLength": 256
+    },
+    "Sex_Survey_Category": {
+      "type": "string",
+      "required": true,
+      "maxLength": 256
+    },
+    "Line_1_Text_1": {
+      "type": "text",
+      "required": true
+    },
+    "Line_1_Image_1": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

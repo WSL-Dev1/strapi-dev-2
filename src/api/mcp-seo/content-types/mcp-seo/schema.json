@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mcp_seos",
+  "info": {
+    "singularName": "mcp-seo",
+    "pluralName": "mcp-seos",
+    "displayName": "MCP SEO"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Master_Category": {
+      "type": "string",
+      "maxLength": 256,
+      "required": true
+    },
+    "Title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 256
+    },
+    "Slug": {
+      "type": "uid",
+      "required": true
+    },
+    "Content": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

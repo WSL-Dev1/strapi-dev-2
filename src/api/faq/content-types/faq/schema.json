@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "faqs",
+  "info": {
+    "singularName": "faq",
+    "pluralName": "faqs",
+    "displayName": "FAQ",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "FAQ_Title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 256
+    },
+    "faq_group": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::faq-group.faq-group",
+      "inversedBy": "faq"
+    },
+    "FAQ_Question": {
+      "type": "string",
+      "required": true,
+      "maxLength": 256
+    },
+    "FAQ_Answer": {
+      "type": "text",
+      "required": true,
+      "maxLength": 50000
+    },
+    "locations": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::location.location",
+      "inversedBy": "faqs"
+    },
+    "Intent": {
+      "type": "string",
+      "maxLength": 256,
+      "required": true
+    },
+    "Sort_Order": {
+      "type": "integer"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tv_explain_links",
+  "info": {
+    "singularName": "tv-explain-link",
+    "pluralName": "tv-explain-links",
+    "displayName": "TV Explain Link"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "maxLength": 256,
+      "required": true
+    },
+    "Description": {
+      "type": "text",
+      "required": true
+    },
+    "locations": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::location.location",
+      "mappedBy": "tv_explain_link"
+    }
+  }
+}

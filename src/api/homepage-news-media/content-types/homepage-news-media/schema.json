@@ -1,0 +1,70 @@
+{
+  "kind": "collectionType",
+  "collectionName": "homepage_news_medias",
+  "info": {
+    "singularName": "homepage-news-media",
+    "pluralName": "homepage-news-medias",
+    "displayName": "Homepage News / Media",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 256
+    },
+    "Short_Synopsis": {
+      "type": "string",
+      "required": true,
+      "maxLength": 256
+    },
+    "Content": {
+      "type": "text",
+      "required": true
+    },
+    "Main_Image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Extra_Images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Published_Datetime": {
+      "type": "datetime"
+    },
+    "tags": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::tag.tag",
+      "inversedBy": "homepage_news_medias"
+    },
+    "author": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::author.author"
+    },
+    "locations": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::location.location",
+      "inversedBy": "homepage_news_medias"
+    },
+    "Slug": {
+      "type": "uid",
+      "required": true
+    }
+  }
+}
