@@ -18,7 +18,7 @@
     },
     "faq": {
       "type": "relation",
-      "relation": "oneToOne",
+      "relation": "oneToMany",
       "target": "api::faq.faq",
       "mappedBy": "faq_group"
     }
