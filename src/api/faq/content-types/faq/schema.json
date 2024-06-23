@@ -19,7 +19,7 @@
     },
     "faq_group": {
       "type": "relation",
-      "relation": "oneToOne",
+      "relation": "manyToOne",
       "target": "api::faq-group.faq-group",
       "inversedBy": "faq"
     },
